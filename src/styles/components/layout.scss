@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body, input, textarea, select, button,
+pre, tt, code, pre *, tt *, code * {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+body, input, textarea, select, button {
+  font-family: "SF UI Text_", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+pre, tt, code, pre *, tt *, code * {
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+sup, sub {
+  position: relative;
+  vertical-align: middle;
+  font-size: 75%;
+  font-weight: normal;
+}
+
+sup { bottom: 0.5em; }
+
+sub { top: 0.5em; }
+
+a {
+  color: $c_link;
+  border-color: transparentize($c_link, $thin);
+}
+
+a:visited {
+  color: $c_visited;
+  border-color: transparentize($c_visited, $thin)
+}
+
+a:hover,
+a.hover {
+  color: $c_hover;
+  border-color: transparentize($c_hover, $thin);
+}
+
+.common {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.flag {
+  position: relative;
+  width: 100%;
+  padding: 48px 0 60px;
+}
+
+@media #{$tablet} {
+  .flag {
+    padding: 16px 0 48px;
+  }
+}
+
+.logo {
+  position: absolute;
+  right: 91%;
+  top: 28px;
+  width: 40px;
+  height: 40px;
+  margin: 10px 20px 0;
+}
+
+@media #{$tablet} {
+  .logo {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 0 8px 4%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.logo img {
+  // why? this is already specified in _e2_drag
+  border-radius: 20px;
+}
+
+.title {
+  margin: 0 9% 0 9%;
+  width: 82%;
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media #{$tablet} {
+  .title {
+    margin: 0 4%;
+    width: 92%;
+    max-width: 480px;
+  }
+}
+
+.title h1 {
+  font-weight: bold;
+  font-size: inherit;
+  line-height: inherit;
+  color: #000;
+}
+
+.title h1 a,
+.title h1 a:visited {
+  color: #000;
+  border-color: transparentize(#000, $thin)
+}
+
+.title h1 a:hover,
+.title h1 a.hover {
+  color: $c_hover;
+  border-color: transparentize($c_hover, $thin)
+}
+
+.title p {
+  margin: 0 0 10px 0;
+}
+
+.engine {
+  color: $c_grey;
+}
+
+.engine a, .engine a:link, .engine a:visited {
+  color: $c_grey;
+  border-color: transparentize($c_grey, $thin)
+}
+
+.engine a:hover, .engine a:active {
+  color: $c_hover;
+  border-color: transparentize($c_hover, $thin)
+}
+
+.spotlight {
+  position: absolute;
+  top: 48px;
+  right: 9%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media #{$tablet} {
+  .spotlight {
+    top: 20px;
+    right: 4%;
+    // position: static;
+    // float: right;
+    // margin-right: 9%;
+  }
+}
+
+.content, .footer {
+  margin: 0 9% 40px 9%;
+  width: 82%;
+}
+
+.content {
+  min-height: 320px;
+}
+
+@media #{$tablet} {
+  .admin-icon {
+    margin: 0 8px;
+  }
+
+  .content {
+    margin: 0 4% 40px;
+    width: 92%;
+    max-width: 100%;
+  }
+
+  .footer {
+    margin: 0 4% 40px;
+    width: 92%;
+    max-width: 100%;
+  }
+
+}

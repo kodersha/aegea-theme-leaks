@@ -1,0 +1,26 @@
+.e2-pages {
+  margin-bottom: 40px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.e2-pages a {
+  padding-top: 4px;
+}
+
+.e2-page-unavailable {
+  color: $c_grey;
+}
+
+// adjust system colors to match the theme
+.e2-upload-error { color: $c_red }
+
+.e2-clickable-keyboard-shortcut:hover {
+  color: $c_hover;
+  border-color: transparentize($c_hover, $thin);
+}
+
+.e2-visual-login {
+  display: inline-block;
+  margin: 4px 0;
+}

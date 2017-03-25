@@ -1,0 +1,93 @@
+.e2-note,
+.e2-note-list {
+  margin-bottom: 60px;
+}
+
+.e2-note h1 {
+  color: #000;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  max-width: 720px;
+  margin-bottom: 8px;
+  padding-right: 25px;
+}
+
+.e2-note h1 a,
+.e2-note h1 a:visited {
+  color: #000;
+  border-color: transparentize(#000, $thin);
+}
+
+.e2-note h1 a:hover,
+.e2-note h1 a.hover {
+  color: $c_hover;
+  border-color: transparentize($c_hover, $thin);
+}
+
+.e2-draft-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+  border-radius: 3px;
+  background: #706858;
+  color: #fff;
+  padding: 1px 5px;
+  position: relative;
+  top: -2px;
+}
+
+.e2-note-favourite h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.e2-note-favourite .favourite {
+  position: relative;
+}
+
+.e2-note-favourite .favourite:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: 11px;
+  right: -26px;
+  width: 28px;
+  height: 16px;
+  background-image: url('../../../system/theme/images/favourite-on.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.e2-note .admin-links-floating {
+  margin-top: -3px;
+  z-index: 100;
+  transition-property: (margin-top);
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
+  background: white;
+  padding: 5px 0 5px 8px;
+  border-radius: 30px 0 0 30px;
+}
+
+.e2-note-favourite .admin-links-floating {
+  margin-top: 10px;
+}
+
+.e2-note-text {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 16px 0;
+}
+
+.e2-note-likes {
+  margin: 0 0 10px 0;
+}
+
+.e2-note-tags,
+.e2-note-comments-link {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  line-height: 16px;
+}

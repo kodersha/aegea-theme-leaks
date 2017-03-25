@@ -1,0 +1,216 @@
+/* headings */
+.e2-heading {
+  margin-bottom: 40px;
+}
+
+.e2-heading h2 {
+  width: 66.67%;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000;
+}
+
+.e2-heading input {
+  font-size: 15px;
+}
+
+.e2-heading-super {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 -4px 0;
+}
+
+.e2-heading-see-also {
+  margin-top: 10px;
+}
+
+.e2-heading-description {
+  margin: 40px 0 40px;
+}
+
+.e2-year-months,
+.e2-month-days {
+  font-size: 12px;
+  line-height: 24px;
+  margin: 12px -4px 0;
+}
+
+.e2-year-month,
+.e2-month-day {
+  padding: 4px;
+}
+
+.e2-month-day-current {
+  background: $c_light;
+  border-radius: 3px;
+}
+
+.e2-period-unavailable {
+  color: $c_grey;
+}
+
+.e2-section-heading {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+
+/* text */
+.e2-text h2,
+.e2-text h3 {
+  font-size: 100%;
+  line-height: inherit;
+  margin: 26px 0 10px 0;
+}
+
+.e2-text h2 { font-weight: bold; }
+
+.e2-text h3 { font-style: italic; }
+
+.e2-text hr {
+  border: none;
+  border-top: 1px transparentize(#000, $thin) solid;
+  margin: 26px 0 16px 0;
+}
+
+.e2-text h2+h3,
+.e2-text h2:first-child,
+.e2-text h3:first-child {
+  margin-top: 0;
+}
+
+.e2-text-generic-object,
+.e2-text-table,
+.e2-text-code,
+.e2-text p,
+.e2-text ul,
+.e2-text ol,
+.e2-text li,
+.e2-text blockquote {
+  margin: 0 0 10px 0;
+}
+
+.e2-text p,
+.e2-text ul,
+.e2-text ol,
+.e2-text li,
+.e2-text blockquote,
+.e2-text-audio,
+.e2-text-calliope-formatted {
+  max-width: 720px;
+}
+
+.e2-text-code,
+.e2-text ul,
+.e2-text ol,
+.e2-text blockquote {
+  padding: 0 0 0 $w_left_pad;
+}
+
+.e2-text p+ul, .e2-text p+ol {
+  margin-top: -10px;
+}
+
+.e2-text ul li {
+  list-style-type: none;
+}
+
+.e2-text th, .e2-text td {
+  padding: 0 $w_gut 10px 0;
+}
+
+.e2-text th {
+  font-weight: bold;
+}
+
+.e2-text-picture,
+.e2-text-picture.fotorama,
+.e2-text-video,
+.e2-text-audio {
+  margin: 0 0 20px 0;
+}
+
+.e2-text-picture a {
+  position: relative;
+}
+
+.e2-text-picture a img {
+  border-style: solid;
+}
+
+.e2-text-picture a.e2-text-picture-link {
+  max-width: 100%;
+  display: inline-block;
+  border: none;
+}
+
+.e2-text-picture a img {
+  box-sizing: content-box;
+  border-width: 1px;
+  margin: -1px;
+}
+
+.e2-text-picture a img {
+  border-color: $c_light;
+  transition-property: border-color;
+  transition-duration: $time;
+  transition-timing-function: ease-out;
+}
+
+.e2-text-picture a:hover img,
+.e2-text-picture a.hover img {
+  border-color: $c_hover;
+  transition: none;
+}
+
+.e2-text-picture a img {
+  /* an image which is also a link should have a border */
+  border-color: $c_light;
+}
+
+.e2-text-picture a:hover img,
+.e2-text-picture a.hover img {
+  border-color: $c_hover;
+}
+
+.e2-text-picture-imgwrapper {
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+
+.e2-text-picture-imgwrapper img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.e2-text-caption {
+  margin: 6px 0 12px 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media #{$tablet} {
+  .e2-text-code,
+  .e2-text ul,
+  .e2-text ol,
+  .e2-text blockquote {
+    padding-left: 8%;
+  }
+
+  .e2-text-generic-object,
+  .e2-text-table,
+  .e2-text-code,
+  .e2-text-picture,
+  .e2-text-picture.fotorama,
+  .e2-text-video,
+  .e2-text-audio {
+    overflow: scroll;
+  }
+}

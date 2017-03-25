@@ -1,0 +1,26 @@
+.e2-note-subscribe-button,
+.e2-note-subscribe-button:visited {
+  display: none;
+  background: rgba(231,231,231,.8);
+  color: #000;
+  transition: background .33s ease-out, color .33s ease-out, fill .33s ease-out;
+  line-height: 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 0;
+  height: 22px;
+  margin: 0 10px 0 0;
+  vertical-align: top;
+  padding: 1px 8px;
+}
+
+.e2-note-subscribe-button:hover,
+.e2-note-subscribe-button.hover {
+  background: rgba(212,212,212,.8);
+  color: #000;
+}
+
+.e2-note-subscribe-button-visible {
+  display: inline-block;
+}
+

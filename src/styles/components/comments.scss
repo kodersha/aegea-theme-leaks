@@ -1,0 +1,98 @@
+.e2-comments {
+  float: left;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.e2-comment-and-reply,
+.e2-comment,
+.e2-comment-toggle {
+  width: 100%;
+   float: left;
+}
+
+.e2-comment-and-reply {
+  margin: 0 0 40px;
+}
+
+.e2-comment {
+  margin: 0;
+}
+
+.e2-comment-toggle {
+  margin: 0 0 40px;
+}
+
+@media #{$mobile} {
+  .e2-comment {
+    margin: 0 0 40px;
+  }
+  .e2-comment-and-reply {
+    margin: 0;
+  }
+}
+
+.e2-comment-secondary-controls {
+  display: inline;
+}
+
+.e2-comment-meta-area {
+  float: left;
+  width: 17.07%;
+  min-height: 1px;
+  padding-right: $w_gut;
+}
+
+@media #{$mobile} {
+  .e2-comment-meta-area {
+    width: 100%;
+    float: none;
+    font-weight: bold;
+  }
+}
+
+.e2-comment-content-area {
+  float: left;
+  width: 65.86%;
+  min-height: 1px;
+  position: relative;
+  padding-right: $w_gut;
+}
+
+@media #{$mobile} {
+  .e2-comment-content-area {
+    width: 100%;
+  }
+}
+
+.e2-comment-control-area {
+  float: left;
+  text-align: right;
+  width: 17.07%;
+  min-height: 1px;
+}
+
+.e2-comment-author-removed {
+  text-decoration: line-through;
+  color: #c00000;
+}
+
+.e2-comment-author-removed span {
+  color: #999;
+}
+
+.e2-reply {
+  margin-top: 10px;
+}
+
+.e2-reply .e2-comment-author:after {
+  content: ' •';
+}
+
+@media #{$mobile} {
+  .e2-comment-control-area {
+    width: 100%;
+    text-align: left;
+    margin-left: -6px;
+  }
+}
