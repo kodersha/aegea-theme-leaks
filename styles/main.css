@@ -1117,6 +1117,11 @@ form {
     color: #fff;
 }
 
+.form-element {
+    width: 82.9%;
+    float: left;
+}
+
 @media screen and (max-width: 735px) {
     .form-control .form-label {
         width: 100%;
@@ -1151,7 +1156,8 @@ form {
     }
 
     .form-element,.form-control-sublabel {
-        width: 100%;
+        width: 100% !important;
+        float: none !important;
         margin-left: 0px;
     }
 
@@ -1210,7 +1216,7 @@ select>button,select>.e2-button {
 button,.e2-button {
     display: inline-block;
     padding: 12px 20px;
-    background: #ececec;
+    background: #2ecc71;
     box-shadow: none;
     font-size: 13px;
     line-height: 18px;
@@ -1220,11 +1226,16 @@ button,.e2-button {
     text-decoration: none;
     cursor: pointer;
     border-radius: 2px;
-    color: #404040;
+    color: #fff;
 }
-
-button:visited,button:active,button:hover,button.hover,.e2-button:visited,.e2-button:active,.e2-button:hover,.e2-button.hover {
-    color: #404040;
+button a, .e2-button a {
+    color: #fff;
+}
+button a:hover, button a.hover, .e2-button a:hover, e2-button a.hover {
+    color: #fff;
+}
+button:visited, button:active, button:hover, button.hover, .e2-button:visited, .e2-button:active, .e2-button:hover, .e2-button.hover {
+    color: #fff;
 }
 
 .e2-submit-button,.e2-delete-button {
@@ -1512,6 +1523,12 @@ img.fotorama__img {
     color: #a0a0a0;
 }
 
+/* Position */
+
+.e2-text [center] {
+    text-align: center;
+}
+
 /* Aside */
 
 .e2-text [aside] {
@@ -1677,7 +1694,11 @@ img.fotorama__img {
 
 @media screen and (min-width:735px) {
     #e2-note-form-wrapper .form-element {
-        width: 80%;
+        width: 82.9%;
         float: right;
     }
+}
+
+.w-100 {
+    width: 100% !important;
 }

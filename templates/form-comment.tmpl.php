@@ -84,7 +84,7 @@
 </div>
 
 <div class="form-control">
-  <div class="form-element">
+  <div class="form-element w-100">
     <textarea name="text"
       class="required full-width e2-textarea-autosize"
       id="text"
