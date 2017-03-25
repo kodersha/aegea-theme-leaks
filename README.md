@@ -1,5 +1,7 @@
 #  [Blogengine](http://blogengine.ru) Themes Leaks
 
+![Image](https://github.com/sasha-travkina/blogengine-themes-leaks/blob/master/screenshot/001.png)
+
 ## Описание
 Leaks - Блоговая тема для "Эгея 2.6"
 
