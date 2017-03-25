@@ -38,3 +38,4 @@ Webmoney
 
 ## Автор
 Александра Травкина - [milkleaks.ru](http://milkleaks.ru)
+Шаблон распространяется по лицензии CC NC.
