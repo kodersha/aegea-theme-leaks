@@ -115,8 +115,8 @@
             <?php if (array_key_exists ('edit-reply-href', $comment) or array_key_exists ('removed-reply-toggle-href', $comment)): ?>
             <div class="e2-comment-control-area">
               <span class="e2-comment-secondary-controls e2-comment-actions admin-links">
-                <?php if (array_key_exists ('edit-reply-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['edit-reply-href'] ?>" class="nu"><span class="e2-svgi"><?= _SVG ('edit') ?></span></a></span><?php endif; ?>
-                <?php if (array_key_exists ('removed-reply-toggle-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['removed-reply-toggle-href'] ?>" class="e2-removed-toggle nu"><span class="e2-svgi"><span class="e2-toggle-state-off"><?= _SVG ('trash') ?></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span><?php endif; ?>
+                <?php if (array_key_exists ('edit-reply-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['edit-reply-href'] ?>" class="nu"><span class="e2-svgi"><i class="icon-pencil-alt"></i></span></a></span><?php endif; ?>
+                <?php if (array_key_exists ('removed-reply-toggle-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['removed-reply-toggle-href'] ?>" class="e2-removed-toggle nu"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-trash-3"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span><?php endif; ?>
               </span>
             </div>
             <?php endif ?>

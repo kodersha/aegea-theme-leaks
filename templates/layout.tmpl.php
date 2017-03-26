@@ -70,8 +70,8 @@
         <?php } ?>
         <div class="copyright">
             <?php _X ('footer-pre') ?>
-            <span id="e2-blog-author"><?= $content['blog']['description'] ?> <?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?>
-            <a class="e2-rss" href="<?=@$content['blog']['rss-href']?>"><?= _S ('gs--rss') ?></a> Копирование материалов только с разрешения автора.
+            <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?>
+            <a class="e2-rss" href="<?=@$content['blog']['rss-href']?>"><?= _S ('gs--rss') ?></a>
         </div>
 
         <?php # please do not remove: #?>

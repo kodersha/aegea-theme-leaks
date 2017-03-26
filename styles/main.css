@@ -168,6 +168,7 @@ img.upyachka {
 }
 
 .engine {
+    line-height: 1.45;
     font-size: 0.8em;
     color: #a0a0a0;
     float: left;
@@ -181,10 +182,10 @@ img.upyachka {
 .copyright {
     font-size: 0.9em;
     line-height: normal;
-    text-align: center;
+    text-align: left;
 }
 .copyright p {
-    text-align: center;
+    text-align: left;
 }
 .counter {
     float: right;
@@ -616,11 +617,7 @@ img.upyachka {
 }
 
 .e2-reply {
-    margin-top: 10px;
-}
-
-.e2-reply .e2-comment-author:after {
-    content: ' •';
+    padding-left: 50px;
 }
 
 @media screen and (max-width: 735px) {
@@ -903,7 +900,9 @@ img.upyachka {
 }
 
 .e2-tag-filter {
-    margin-bottom: 12px;
+    margin-bottom: 2em;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .e2-tag-filter-slide-shaft,.e2-tag-filter-slider span {
