@@ -580,7 +580,10 @@ img.upyachka {
     vertical-align: text-bottom;
 }
 .e2-comment-content {
-    padding: 10px 0;
+    padding: 10px 0 15px;
+}
+.e2-comment-content p {
+	margin: 0 !important;
 }
 .e2-reply .e2-comment-content {
     padding: 0;
@@ -624,9 +627,8 @@ img.upyachka {
 }
 
 .e2-reply {
-    padding-left: 50px;
-    padding-bottom: 10px;
-    margin-top: -10px;
+	padding-left: 50px;
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 735px) {
@@ -1221,23 +1223,26 @@ select>button,select>.e2-button {
     display: none;
 }
 
-button,.e2-button {
+button, .e2-button {
+	font-family: "Helvetica", sans-serif;
     display: inline-block;
-    padding: 12px 20px;
+    padding: 0 20px;
     background: #2ecc71;
     box-shadow: none;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 40px;
     font-weight: normal;
     white-space: nowrap;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     border-radius: 2px;
+	height: 40px;
     color: #fff;
 }
 button a, .e2-button a {
     color: #fff;
+	vertical-align: middle;
 }
 button a:hover, button a.hover, .e2-button a:hover, e2-button a.hover {
     color: #fff;
@@ -1249,7 +1254,7 @@ button:visited, button:active, button:hover, button.hover, .e2-button:visited, .
 .e2-submit-button,.e2-delete-button {
     font-size: 16px;
     line-height: 24px;
-    padding: 12px 24px;
+    padding: 0 24px;
 }
 
 .e2-submit-button {
@@ -1609,16 +1614,20 @@ img.fotorama__img {
     border-radius: 2px;
 }
 .avatar-me {
+	font-family: "Helvetica", sans-serif;
     color: #fff;
     left: 0;
     right: 0;
+    top: 0;
+    bottom: 0;
     text-align: center;
     text-overflow: ellipsis;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     display: table-cell;
     vertical-align: middle;
+	padding-top: 2px;
 }
 .avatar-me-wrapper .user-name {
     display: none;
@@ -1709,4 +1718,8 @@ img.fotorama__img {
 
 .w-100 {
     width: 100% !important;
+}
+
+.admin-links-sticky {
+    right: 0;
 }
