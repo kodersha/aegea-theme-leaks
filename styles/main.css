@@ -275,7 +275,7 @@ img.upyachka {
 
 .e2-search-icon {
     position: absolute;
-    top: 0;
+    top: -3px;
     left: 15px;
     color: #a0a0a0;
     transition-duration: .25s;
@@ -1247,12 +1247,12 @@ button a, .e2-button a {
 button a:hover, button a.hover, .e2-button a:hover, e2-button a.hover {
     color: #fff;
 }
-button:visited, button:active, button:hover, button.hover, .e2-button:visited, .e2-button:active, .e2-button:hover, .e2-button.hover {
+button:visited, button a:visited, button:active, button:hover, button.hover, .e2-button:visited, .e2-button:active, .e2-button:hover, .e2-button.hover {
     color: #fff;
 }
 
 .e2-submit-button,.e2-delete-button {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     padding: 0 24px;
 }
@@ -1276,7 +1276,7 @@ button:visited, button:active, button:hover, button.hover, .e2-button:visited, .
 }
 
 button:disabled,.e2-button:disabled {
-    color: rgba(0,0,0,0.2);
+    opacity: 0.3;
     cursor: default;
     pointer-events: none;
 }
