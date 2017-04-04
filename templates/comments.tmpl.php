@@ -1,4 +1,4 @@
-<div class="comments">
+<div class="common">
     <div class="content">
         <?php if (array_key_exists ('comments', $content)) { ?>
 
