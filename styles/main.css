@@ -784,6 +784,20 @@ img.upyachka {
     -ms-hyphens: auto;
     hyphens: auto;
 }
+.e2-text blockquote {
+    position: relative;
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: 1.3;
+    color: #a0a0a0;
+}
+@media screen and (min-width:1023px) {
+    .e2-text blockquote {
+        border-left: 4px solid #ccc;
+        padding: 0 0 0 1em;
+        margin: 0 0 0 -1em; 
+    }
+}
 @media screen and (min-width:1023px) {
     .e2-text ul li:nth-child(even) {
         -webkit-border-radius: 2px;
