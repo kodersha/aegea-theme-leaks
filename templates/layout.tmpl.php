@@ -78,9 +78,9 @@
         <div class="engine">
             <?= $content['engine']['about'] ?>
             <?php if ($content['sign-in']['done?']) { ?>
-                &nbsp;&nbsp;&nbsp;
                 <span title="<?= _S ('gs--pgt') ?>"><?=$content['engine']['pgt']?> <?= _S ('gs--seconds-contraction') ?></span>
             <?php } ?>
+            / <a href="https://github.com/sasha-travkina/blogengine-themes-leaks" target="_blank" class="e2-tag sponsored">Шаблон Leaks</a>
         </div>
 
         <div class="counter">
