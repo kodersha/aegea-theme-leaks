@@ -2,15 +2,15 @@
     <?php
 
         $quotes[] = '
-        <p>Цитата</p>
+        <p>Текст цитаты</p>
         <span>Автор</span>';
         $quotes[] = '
-        <p>Цитата</p>
+        <p>Текст цитаты</p>
         <span>Автор</span>';
         $quotes[] = '
-        <p>Цитата</p>
+        <p>Текст цитаты</p>
         <span>Автор</span>';
-        
+
         srand ((double) microtime() * 1000000);
         $random_number = rand(0,count($quotes)-1);
 

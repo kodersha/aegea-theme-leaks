@@ -2,6 +2,7 @@
 <html>
 
     <head>
+        <meta charset="utf-8">
 
         <?php _LIB ('jquery') ?>
         <?php _LIB ('pseudohover') ?>
@@ -10,13 +11,13 @@
         <e2:head-data />
 
         <?php if ($content['sign-in']['done?']) { ?>
-        <?php _JS ('local-copies') ?>
+            <?php _JS ('local-copies') ?>
         <?php } ?>
 
         <e2:scripts-data />
         <?= @$content['embed']['pre-head-end'] ?>
 
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto+Slab:300,400,700" rel="stylesheet">
 
     </head>
 
@@ -56,12 +57,13 @@
     <?php _JS ('button') ?>
     <?php _JS ('lazyload') ?>
     <?php _JS ('wow') ?>
+    <?php _JS ('scrolline') ?>
 
     <?php _T ('init-script') ?>
 
     <?php if ($content['sign-in']['done?']) { ?>
-    <?php _CSS ('admin') ?>
-    <?php _JS ('admin') ?>
+        <?php _CSS ('admin') ?>
+        <?php _JS ('admin') ?>
     <?php } ?>
 
 </html>

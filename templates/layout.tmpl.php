@@ -2,6 +2,10 @@
     <div id="preloader_preload"></div>
 </div>
 
+<div class="progressContainer">
+	<div class="progressBar"></div>
+</div>
+
 <div class="common <?php if ($content['class'] == 'frontpage') { ?>frontpage<?php } ?>">
 
     <div class="flag">
@@ -55,13 +59,15 @@
     <?php _T ('comments') ?>
 <?php } ?>
 
-<?php /* if ($content['class'] == 'frontpage') { ?>
+<?php /*
+<?php if ($content['class'] == 'frontpage') { ?>
     <div class="common quote">
         <div class="content">
             <?php _T ('quote') ?>
         </div>
     </div>
-<?php } */ ?>
+<?php } ?>
+*/ ?>
 
 <div class="common">
     <div class="footer">
@@ -70,17 +76,16 @@
         <?php } ?>
         <div class="copyright">
             <?php _X ('footer-pre') ?>
+            <a class="e2-blog-rss" href="<?=@$content['blog']['rss-href']?>"><i class="icon-rss"></i></a>
             <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?>
-            <a class="e2-rss" href="<?=@$content['blog']['rss-href']?>"><?= _S ('gs--rss') ?></a>
+            <div class="e2-blog-description"><?= $content['blog']['description'] ?></div>
         </div>
 
         <?php # please do not remove: #?>
         <div class="engine">
             <?= $content['engine']['about'] ?>
-            <?php if ($content['sign-in']['done?']) { ?>
-                <span title="<?= _S ('gs--pgt') ?>"><?=$content['engine']['pgt']?> <?= _S ('gs--seconds-contraction') ?></span>
-            <?php } ?>
-            / <a href="https://github.com/sasha-travkina/blogengine-themes-leaks" target="_blank" class="e2-tag sponsored">Шаблон Leaks</a>
+            / <span title="<?= _S ('gs--pgt') ?>"><?=$content['engine']['pgt']?> <?= _S ('gs--seconds-contraction') ?></span>
+            / <a target="_blank" href="https://github.com/sasha-travkina/blogengine-themes-leaks" class="e2-tag sponsored">Шаблон Leaks</a>
         </div>
 
         <div class="counter">

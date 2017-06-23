@@ -21,7 +21,9 @@
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
 #cboxOverlay{
-	background:rgba(255, 255, 255, .97);
+	background: #666;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
 }
 #colorbox {
     outline: 0;
@@ -33,7 +35,7 @@
 }
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxLoadedContent{background:#333;border-radius: 2px;}
+        #cboxLoadedContent{border-radius: 2px;box-shadow: 0 4px 16px rgba(0,0,0,.2); }
         #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
         #cboxLoadingOverlay{background:#000;}
         #cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
