@@ -82,4 +82,4 @@
 
 <script type="text/javascript">
     $('.e2-text-picture > div').addClass('e2-picture-frame');
-</script>
+</script> 
