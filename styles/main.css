@@ -477,7 +477,8 @@ post[class*="e2-note"]:first-of-type {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    padding: 4em 0;
+    padding: 4em 4%;
+    margin: 8em -4% 0;
 }
 .frontpage .e2-note-favourite .admin-links-floating {
     background: #f1f3f4;
