@@ -485,6 +485,11 @@ mark {
         margin: 4em -4% 0;
     }
 }
+.frontpage .e2-note-favourite .more::before {
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 40%, rgba(241,243,244,1) 80%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(241,243,244,1) 80%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 40%,rgba(241,243,244,1) 80%);
+}
 
 .e2-note-favourite .favourite {
   position: relative;
