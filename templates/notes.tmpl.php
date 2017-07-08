@@ -12,10 +12,10 @@
 
             <?php if (array_key_exists ('edit-href', $note)): ?>
 
-                <span class="admin-icon"><a href="<?= $note['edit-href'] ?>" class="nu <?php if (array_key_exists ('only', $content['notes'])) {?>e2-edit-link<?php } ?>"><span class="e2-svgi"><i class="icon-pencil-alt"></i></span></a><span class="e2-unsaved-led" style="display: none"></span></span>
+                <span class="admin-icon"><a href="<?= $note['edit-href'] ?>" class="nu <?php if (array_key_exists ('only', $content['notes'])) {?>e2-edit-link<?php } ?>"><span class="e2-svgi"><i class="icon-pen"></i></span></a><span class="e2-unsaved-led" style="display: none"></span></span>
                     <?php if (array_key_exists ('favourite-toggle-href', $note)) { ?>
                         <span class="admin-links admin-icon"><a href="<?= $note['favourite-toggle-href'] ?>" class="nu e2-favourite-toggle <?= ($note['favourite?']? 'e2-toggle-on' : '') ?> e-2-toggle-thinking">
-                            <span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-attach-3"></i></span><span class="e2-toggle-state-on"><i class="icon-attach-3"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span>
+                            <span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-fire"></i></span><span class="e2-toggle-state-on"><i class="icon-fire"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span>
                             <?php } ?>
 
                         </span>
@@ -23,7 +23,7 @@
 
                 </span>
 
-                <article>
+                <article id="post" class="<?php if ($content['class'] != 'note') { ?>e2-note-short<?php } ?>">
 
                     <?php // TITLE // ?>
                     <h1 class="<?= $note['published?']? 'e2-published' : 'e2-draft' ?> e2-smart-title">
@@ -47,10 +47,12 @@
                         <?php // THUMBS // ?>
 
                         <?php if (array_key_exists ('thumbs', $note) and (count ($note['thumbs']))) { ?>
-                            <a href="<?= $note['href'] ?>" class="nu">
-                                <?php foreach ($note['thumbs'] as $x) { ?><img src="<?= $x['href'] ?>" width="<?= $x['width'] ?>" height="<?= $x['height'] ?>" class="e2-search-results-image <?php if ($x['highlighted?']) { ?>e2-search-results-image-highlighed<?php } ?> <?php if ($note['has-highlighted-thumbs?'] and !$x['highlighted?']) { ?>e2-search-results-image-dimmed<?php } ?>" /><?php } ?>
-                            </a>
-                            <?php } ?>
+                            <div class="e2-search-thumb">
+                                <a href="<?= $note['href'] ?>" class="nu">
+                                    <?php foreach ($note['thumbs'] as $x) { ?><img src="<?= $x['href'] ?>" width="<?= $x['width'] ?>" height="<?= $x['height'] ?>" class="e2-search-results-image <?php if ($x['highlighted?']) { ?>e2-search-results-image-highlighed<?php } ?> <?php if ($note['has-highlighted-thumbs?'] and !$x['highlighted?']) { ?>e2-search-results-image-dimmed<?php } ?>" /><?php } ?>
+                                </a>
+                            </div>
+                        <?php } ?>
 
                             <?php // LIST OF KEYWORDS // ?>
 

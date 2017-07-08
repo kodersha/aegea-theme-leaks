@@ -1,5 +1,7 @@
 <?php _JS ('form-preferences') ?>
 
+<div class="e2-note-form-wrapper">
+
 <form
   action="<?= @$content['form-preferences']['form-action'] ?>"
   method="post"
@@ -243,3 +245,5 @@
 <?php if (array_key_exists ('logout', $content['admin-hrefs'])): ?>
   <form action="<?= $content['admin-hrefs']['logout'] ?>" method="post" style="display: inline-block"><button type="submit"><?= _S ('fb--sign-out') ?></button></form>
 <?php endif ?>
+
+</div>

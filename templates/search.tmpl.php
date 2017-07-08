@@ -15,7 +15,7 @@
         >
             <label class="e2-search-input">
                 <input class="e2-search-input-input text" type="text" name="query" id="query" value="<?= @$content['search']['query'] ?>" />
-                <div class="e2-search-icon"><i class="icon-search-2"></i></div>
+                <div class="e2-search-icon"><i class="icon-magnifying"></i></div>
             </label>
         </form>
 

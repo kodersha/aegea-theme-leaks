@@ -16,7 +16,6 @@
             scrolling: 'false'
         });
     });
-
     $(document).ready(function() {$('.e2-text a').attr('target','_blank');});
 </script>
 
@@ -40,34 +39,6 @@
 </script>
 
 <script type="text/javascript">
-    $(".e2-text-picture-imgwrapper img").each(function() {
-        $(this).addClass('lazy');
-        $(this).attr('data-original', $(this).attr('src'));
-        $(this).removeAttr("src");
-    })
-    $("img.lazy").lazyload({
-    });
-</script>
-
-<script type="text/javascript">
-    var wow = new WOW(
-        {
-        boxClass:     'wow',      // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset:       -200,          // distance to the element when triggering the animation (default is 0)
-        mobile:       true,       // trigger animations on mobile devices (default is true)
-        live:         true,       // act on asynchronously loaded content (default is true)
-        callback:     function(box) {
-            // the callback is fired every time an animation is started
-            // the argument that is passed in is the DOM node being animated
-        },
-        scrollContainer: null // optional scroll container selector, otherwise use window
-        }
-    );
-    wow.init();
-</script>
-
-<script type="text/javascript">
     $(window).load(function(){
         $(window).scroll(function() {
         var wintop = $(window).scrollTop(), docheight = $('body').height(), winheight = $(window).height();
@@ -81,5 +52,56 @@
 </script>
 
 <script type="text/javascript">
+    $(".e2-text-picture-imgwrapper img").each(function() {
+        $(this).addClass('lazy');
+        $(this).attr('data-original', $(this).attr('src'));
+        $(this).removeAttr("src");
+    })
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+    });
+</script>
+
+<script type="text/javascript">
     $('.e2-text-picture > div').addClass('e2-picture-frame');
-</script> 
+</script>
+
+<script type="text/javascript">
+    jQuery.extend(jQuery.fn, {
+        toplinkwidth: function(){
+            var totalContentWidth = jQuery('').outerWidth(); // ширина блока с контентом, включая padding
+            var totalTopLinkWidth = jQuery(this).children('a').outerWidth(true); // ширина самой кнопки наверх, включая padding и margin
+            var h = jQuery(window).width()/2-totalContentWidth/2-totalTopLinkWidth;
+            if(h<0){
+                // если кнопка не умещается, скрываем её
+                jQuery(this).hide();
+                return false;
+            } else {
+                if(jQuery(window).scrollTop() >= 900){
+                    jQuery(this).show();
+                }
+                return true;
+            }
+        }
+    });
+
+    jQuery(function($){
+        var topLink = $('#top-link');
+        $(window).scroll(function() {
+            if($(window).scrollTop() >= 900 && topLink.toplinkwidth()) {
+                topLink.fadeIn(300);
+            } else {
+                topLink.fadeOut(300);
+            }
+        });
+        topLink.click(function(e) {
+            $("body,html").animate({scrollTop: 0}, 1000);
+            return false;
+        });
+    });
+</script>

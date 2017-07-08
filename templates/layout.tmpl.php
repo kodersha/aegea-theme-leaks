@@ -59,15 +59,13 @@
     <?php _T ('comments') ?>
 <?php } ?>
 
-<?php /*
-<?php if ($content['class'] == 'frontpage') { ?>
+<?php /* if ($content['class'] == 'frontpage') { ?>
     <div class="common quote">
         <div class="content">
             <?php _T ('quote') ?>
         </div>
     </div>
-<?php } ?>
-*/ ?>
+<?php } */ ?>
 
 <div class="common">
     <div class="footer">
@@ -76,8 +74,7 @@
         <?php } ?>
         <div class="copyright">
             <?php _X ('footer-pre') ?>
-            <a class="e2-blog-rss" href="<?=@$content['blog']['rss-href']?>"><i class="icon-rss"></i></a>
-            <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?>
+            <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?> / <a class="e2-blog-rss" href="<?=@$content['blog']['rss-href']?>">RSS</a>
             <div class="e2-blog-description"><?= $content['blog']['description'] ?></div>
         </div>
 
@@ -99,5 +96,5 @@
 </div>
 
 <div id="top-link">
-	<a href="#top"><i class="icon-up-open-big"></i></a>
+	<a href="#top"><i class="icon-chevron_up"></i></a>
 </div>

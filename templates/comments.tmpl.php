@@ -39,7 +39,7 @@
               </span>
 
               <span class="e2-comment-actions admin-links">
-                <?php if (array_key_exists ('important-toggle-href', $comment)): ?><a href="<?= $comment['important-toggle-href'] ?>" class="nu e2-important-toggle <?= ($comment['important?']? 'e2-toggle-on' : '') ?>"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-star-empty-1"></i></span><span class="e2-toggle-state-on"><i class="icon-star-4"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a><?php endif ?>
+                <?php if (array_key_exists ('important-toggle-href', $comment)): ?><a href="<?= $comment['important-toggle-href'] ?>" class="nu e2-important-toggle <?= ($comment['important?']? 'e2-toggle-on' : '') ?>"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-star_empty"></i></span><span class="e2-toggle-state-on"><i class="icon-star"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a><?php endif ?>
                 <!-- <?php if (array_key_exists ('ip-href', $comment)) { ?><small><a href="<?=$comment['ip-href']?>" class="e2-admin-link"><?=$comment['ip']?></small></a><?php } ?>-->
               </span>
               <p class="time"><?= _DT ('j {month-g} Y, H:i', $comment['time']) ?></p>
@@ -63,9 +63,9 @@
             <?php if (array_key_exists ('edit-href', $comment) or array_key_exists ('removed-toggle-href', $comment)): ?>
             <div class="e2-comment-control-area">
               <span class="e2-comment-secondary-controls e2-comment-actions admin-links">
-                <?php if ($comment['visible?'] and !$comment['replying?'] and array_key_exists ('reply-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['reply-href'] ?>" class="nu"><span class="e2-svgi"><i class="icon-reply-outline"></i></span></a></span><?php endif; ?>
-                <?php if (array_key_exists ('edit-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['edit-href'] ?>" class="nu"><span class="e2-svgi"><i class="icon-pencil-alt"></i></span></a></span><?php endif ?>
-                <?php if (array_key_exists ('removed-toggle-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['removed-toggle-href'] ?>" class="e2-removed-toggle nu"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-trash-3"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span><?php endif ?>
+                <?php if ($comment['visible?'] and !$comment['replying?'] and array_key_exists ('reply-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['reply-href'] ?>" class="nu e2-comment-reply"><span class="e2-svgi"><i class="icon-message"></i></span></a></span><?php endif; ?>
+                <?php if (array_key_exists ('edit-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['edit-href'] ?>" class="nu"><span class="e2-svgi"><i class="icon-pen"></i></span></a></span><?php endif ?>
+                <?php if (array_key_exists ('removed-toggle-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['removed-toggle-href'] ?>" class="e2-removed-toggle nu"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-cross_mark"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span><?php endif ?>
               </span>
 
             </div>
@@ -88,7 +88,7 @@
               </span>
 
               <span class="e2-comment-actions admin-links">
-                <?php if (array_key_exists ('reply-important-toggle-href', $comment)): ?><a href="<?= $comment['reply-important-toggle-href'] ?>" class="nu e2-important-toggle <?= ($comment['reply-important?']? 'e2-toggle-on' : '') ?>"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-star-empty-1"></i></span><span class="e2-toggle-state-on"><i class="icon-star-4"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a><?php endif ?>
+                <?php if (array_key_exists ('reply-important-toggle-href', $comment)): ?><a href="<?= $comment['reply-important-toggle-href'] ?>" class="nu e2-important-toggle <?= ($comment['reply-important?']? 'e2-toggle-on' : '') ?>"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-star_empty"></i></span><span class="e2-toggle-state-on"><i class="icon-star"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a><?php endif ?>
                 <!--<?php if (array_key_exists ('ip-href', $comment)) { ?><small><a href="<?=$comment['ip-href']?>" class="e2-admin-link"><?=$comment['ip']?></small></a><?php } ?>-->
               </span>
 
@@ -115,8 +115,8 @@
             <?php if (array_key_exists ('edit-reply-href', $comment) or array_key_exists ('removed-reply-toggle-href', $comment)): ?>
             <div class="e2-comment-control-area">
               <span class="e2-comment-secondary-controls e2-comment-actions admin-links">
-                <?php if (array_key_exists ('edit-reply-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['edit-reply-href'] ?>" class="nu"><span class="e2-svgi"><i class="icon-pencil-alt"></i></span></a></span><?php endif; ?>
-                <?php if (array_key_exists ('removed-reply-toggle-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['removed-reply-toggle-href'] ?>" class="e2-removed-toggle nu"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-trash-3"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span><?php endif; ?>
+                <?php if (array_key_exists ('edit-reply-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['edit-reply-href'] ?>" class="nu"><span class="e2-svgi"><i class="icon-pen"></i></span></a></span><?php endif; ?>
+                <?php if (array_key_exists ('removed-reply-toggle-href', $comment)): ?><span class="admin-icon"><a href="<?= $comment['removed-reply-toggle-href'] ?>" class="e2-removed-toggle nu"><span class="e2-svgi"><span class="e2-toggle-state-off"><i class="icon-cross_mark"></i></span><span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span></span></a></span><?php endif; ?>
               </span>
             </div>
             <?php endif ?>
