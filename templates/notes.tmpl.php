@@ -6,7 +6,7 @@
 
     <?php _X ('note-pre') ?>
 
-    <div id="e2-note-<?= $note['_']['_id'] ?>" class="<?= array_key_exists ('only', $content['notes'])? 'e2-only ': '' ?>e2-note <?= $note['favourite?']? 'e2-note-favourite' : '' ?> <?= $note['visible?']? '' : 'e2-hidden' ?> <?= $note['playlist?']? 'jouele-playlist' : '' ?><?php if ($content['class'] != 'note') { ?> wow fadeIn<?php } ?>">
+    <post id="e2-note-<?= $note['_']['_id'] ?>" class="<?= array_key_exists ('only', $content['notes'])? 'e2-only ': '' ?>e2-note <?= $note['favourite?']? 'e2-note-favourite' : '' ?> <?= $note['visible?']? '' : 'e2-hidden' ?> <?= $note['playlist?']? 'jouele-playlist' : '' ?>">
 
         <span class="admin-links admin-links-floating admin-links-sticky">
 
@@ -91,7 +91,7 @@
                                     <?php endif ?>
                                 </div>
 
-                                </div>
+                                </post>
 
                                 <?php if ($content['class'] == 'note') { ?>
                                     <div class="e2-likes-action">

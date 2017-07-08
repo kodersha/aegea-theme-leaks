@@ -5,7 +5,7 @@
         'ru' => 'Leaks',
     ),
 
-    'max_image_width' => 950,
-    'max_image_height' => 840,
+    'max_image_width' => 800,
+    'max_image_height' => 600,
 
 ); ?>
