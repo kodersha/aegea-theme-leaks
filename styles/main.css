@@ -203,6 +203,10 @@ mark {
     }
 }
 
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
 .content {
     margin: 0 auto 40px auto;
     max-width: 1200px;
@@ -770,8 +774,8 @@ post[class*="e2-note"]:first-of-type {
 
 .e2-visual-login {
     display: inline-block;
-    margin: -5px 0 0;
     position: absolute;
+    opacity: 0.8;
 }
 .e2-heading {
     text-align: center;
