@@ -1,3 +1,4 @@
+<?php /* Кат постов */ ?>
 <script type="text/javascript">
     $('.e2-note-short').readmore({
         speed: 75,

@@ -7,6 +7,7 @@
     <?php } ?>
 </script>
 
+<?php /* Colorbox */ ?>
 <script type="text/javascript">
     $('.e2-text img').click(function() {
         $(this).colorbox({
@@ -19,6 +20,7 @@
     $(document).ready(function() {$('.e2-text a').attr('target','_blank');});
 </script>
 
+<?php /* Предзагрузка страницы */ ?>
 <script type="text/javascript">
     var preloader = document.getElementById("preloader_preload");
     function fadeOutnojquery(el) {
@@ -38,6 +40,7 @@
     };
 </script>
 
+<?php /* Индикатор прокрутки страницы */ ?>
 <script type="text/javascript">
     $(window).load(function(){
         $(window).scroll(function() {
@@ -51,6 +54,7 @@
     });
 </script>
 
+<?php /* Плавная подгрузка изображений */ ?>
 <script type="text/javascript">
     $(".e2-text-picture-imgwrapper img").each(function() {
         $(this).addClass('lazy');
@@ -58,7 +62,6 @@
         $(this).removeAttr("src");
     })
 </script>
-
 <script type="text/javascript">
     $(function() {
         $("img.lazy").lazyload({
@@ -67,18 +70,19 @@
     });
 </script>
 
+<?php /* Центрирование изображений */ ?>
 <script type="text/javascript">
     $('.e2-text-picture > div').addClass('e2-picture-frame');
 </script>
 
+<?php /* Кнопка вверх */ ?>
 <script type="text/javascript">
     jQuery.extend(jQuery.fn, {
         toplinkwidth: function(){
-            var totalContentWidth = jQuery('').outerWidth(); // ширина блока с контентом, включая padding
-            var totalTopLinkWidth = jQuery(this).children('a').outerWidth(true); // ширина самой кнопки наверх, включая padding и margin
+            var totalContentWidth = jQuery('').outerWidth();
+            var totalTopLinkWidth = jQuery(this).children('a').outerWidth(true);
             var h = jQuery(window).width()/2-totalContentWidth/2-totalTopLinkWidth;
             if(h<0){
-                // если кнопка не умещается, скрываем её
                 jQuery(this).hide();
                 return false;
             } else {
