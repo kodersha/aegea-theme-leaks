@@ -169,6 +169,10 @@ mark {
     margin: 0 0 10px 0;
     text-align: center;
 }
+.e2-back {
+    margin: 0 auto;
+    max-width: 800px;
+}
 
 .engine {
     line-height: 1.45;
@@ -2122,6 +2126,10 @@ img.fotorama__img {
 
 /* Orphus */
 
+.orphus {
+    margin: 0 auto;
+    max-width: 800px;
+}
 .orphus p {
     text-align: left;
     font-size: 0.8em;
