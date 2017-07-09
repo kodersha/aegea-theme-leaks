@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 html {
     overflow-y: auto;
     overflow-x: hidden;
@@ -19,38 +18,30 @@ body {
     margin: 0;
     padding: 0;
 }
-
 body,input,textarea,select,button,pre,tt,code,pre *,tt *,code * {
     font-size: 16px;
     line-height: 24px;
 }
-
 body,input,textarea,select,button {
     font-family: "LatoWeb", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-
-
 pre, tt, code, pre *, tt *, code * {
     white-space: pre-wrap;
     font-size: 13px;
     line-height: 1.4;
 }
-
 sup,sub {
     position: relative;
     vertical-align: middle;
     font-size: 75%;
     font-weight: normal;
 }
-
 sup {
     bottom: 0.5em;
 }
-
 sub {
     top: 0.5em;
 }
-
 a {
     border: 0;
     color: #2ecc71;
@@ -59,11 +50,9 @@ a {
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-
 a:visited {
     color: #2ecc71;
 }
-
 a:hover,a.hover {
     color: #00923e;
 }
@@ -267,34 +256,77 @@ mark {
 }
 
 .e2-search-input .e2-search-input-input {
-    cursor: pointer;
-    position: relative;
-    -webkit-appearance: none;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    width: 0;
-    height: 50px;
-    padding-left: 45px !important;
+    background-color: rgba(241, 243, 244, 0.3);
+    cursor: text;
+    width: 100%;
+    padding-left: 50px !important;
     padding-right: 5px !important;
-    border-color: transparent !important;
+    font-family: "PT Sans", sans-serif;
 }
-
-.e2-search-input {
-    top: -2px;
+.e2-search .e2-enterable {
     position: relative;
 }
-
-.spotlight .e2-search-input,.spotlight .e2-search-input-input {
-    background-color: transparent;
+.e2-search .e2-search-icon {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #8890a7;
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
 }
+
+.e2-search .e2-search-icon:hover {
+    color: #333;
+    cursor: pointer;
+    transition: 0;
+}
+
+.e2-search .e2-search-icon-focus,
+.e2-search .e2-search-icon-focus:hover {
+    cursor: text;
+    fill: #404040;
+}
+
+.e2-search .e2-search-results-image {
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    vertical-align: top;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 735px) {
+    .e2-search .e2-search-input .e2-search-input-input:focus {
+        width: 10em;
+    }
+}
+
+.e2-search-tags {
+    position: relative;
+    margin-right: 12px;
+    margin-left: -24px;
+    padding: 0;
+}
+.e2-search-tags .e2-svgi {
+    font-size: 1em;
+	margin-top: 0;
+    padding: 0;
+}
+.e2-search-tags a {
+    color: #567;
+}
+.e2-search-tags a.hover {
+    color: #404040;
+}
+.e2-search-thumb {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 
 .admin-links .e2-svgi {
     font-size: 1em;
     vertical-align: bottom;
-}
-.admin-menu {
-
 }
 .admin-menu .admin-icon.e2-new-note-item {
     background: #f1f3f4;
@@ -333,104 +365,6 @@ mark {
     font-size: 1em;
 }
 
-.e2-search-icon {
-    position: absolute;
-    top: -1px;
-    left: 15px;
-    color: #a0a0a0;
-    transition-duration: .25s;
-    transition-timing-function: ease-out;
-}
-
-.e2-search-icon:hover {
-    color: #333;
-    cursor: pointer;
-    transition: 0;
-}
-
-.e2-search-icon-focus,.e2-search-icon-focus:hover {
-    cursor: text;
-    fill: #404040;
-}
-
-.e2-heading .e2-search-icon {
-    color: #a0a0a0;
-}
-
-.e2-search-input .e2-search-input-input,.e2-search-input .e2-search-input-input:focus {
-    transition-property: width,padding-left,padding-right,border-color;
-    transition-duration: .25s;
-    transition-timing-function: ease-out;
-}
-
-.e2-heading .e2-search-input .e2-search-input-input {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    cursor: text;
-    width: 100%;
-    height: 50px;
-    padding-left: 45px !important;
-    padding-right: 5px !important;
-    border-color: #d0d0d0 !important;
-    background-color: #f5f5f5;
-    font-family: "PT Sans", sans-serif;
-}
-
-@media screen and (max-width: 735px) {
-    .e2-heading .e2-search-input .e2-search-input-input {
-        width: 100%;
-    }
-}
-
-.e2-heading .e2-search-input .e2-search-input-input:focus {
-    width: 100%;
-    transition: none;
-}
-
-.e2-search-input .e2-search-input-input {
-    background-color: #f1f3f4;
-    cursor: text;
-    width: 100%;
-    padding-left: 45px !important;
-    padding-right: 5px !important;
-    font-family: "PT Sans", sans-serif;
-}
-.e2-search-results-image {
-    margin-right: 0.5em;
-    margin-bottom: 1em;
-    vertical-align: top;
-    border-radius: 2px;
-}
-
-@media screen and (max-width: 735px) {
-    .e2-search-input .e2-search-input-input:focus {
-        width: 10em;
-    }
-}
-
-.e2-search-tags {
-    position: relative;
-    margin-right: 12px;
-    margin-left: -24px;
-    padding: 0;
-}
-.e2-search-tags .e2-svgi {
-    font-size: 1em;
-	margin-top: 0;
-    padding: 0;
-}
-.e2-search-tags a {
-    color: #567;
-}
-.e2-search-tags a.hover {
-    color: #404040;
-}
-.e2-search-thumb {
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-}
 
 .e2-heading-description {
     max-width: 800px;
@@ -561,7 +495,7 @@ post[class*="e2-note"]:first-of-type {
 
 .e2-likes-action {
     display: table;
-    margin: 72px auto 50px;
+    margin: 50px auto;
     height: 100%;
 }
 ._2tga.active {
@@ -599,10 +533,12 @@ post[class*="e2-note"]:first-of-type {
     padding: 1px 10px 1px 4px;
 }
 .e2-actions {
-    display: table;
-    width: 100%;
     max-width: 800px;
     margin: 0 auto;
+}
+.e2-actions .e2-tags-comments {
+    display: table;
+    width: 100%;
 }
 .e2-note-tags,.e2-note-comments-link {
     line-height: 1.25;

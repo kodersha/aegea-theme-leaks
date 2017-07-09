@@ -58,78 +58,83 @@
             </div>
         <?php } ?>
 
-        <?php // LIST OF KEYWORDS // ?>
+        <?php // ACTIONS // ?>
         <div class="e2-actions">
-            <?php if ($content['class'] != 'frontpage') { ?>
-                <?php if (array_key_exists ('tags', $note)): ?>
-                    <div class="e2-note-tags">
-                        <?php
-                        $tags = array ();
-                        foreach ($note['tags'] as $tag) {
-                        if ($tag['current?']) {
-                        $tags[] = '<span class="e2-tag e2-marked">'. $tag['name'] .'</span>';
-                        } else {
-                        $tags[] = '<a href="'. $tag['href'] .'" class="e2-tag">'. $tag['name'] .'</a>';
-                        }
-                        }
-                        echo implode ('', $tags)
-                        ?>
-                    </div>
-                <?php endif; ?>
-            <?php } ?>
 
-            <?php // COMMENTS LINK // ?>
+            <div class="e2-tags-comments">
 
-            <div class="e2-note-comments-link">
-                <span class="e2-timestamp" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></span>
-                <br />
-                <?php if ($note['comments-link?']): ?>
-                <?php if ($note['comments-count']) { ?><a href="<?= $note['href'] ?>#e2-comments-count"><?= $note['comments-count-text'] ?></a><?php if ($note['new-comments-count'] == 1 and $note['comments-count'] == 1) { ?>, <?= _S ('gs--comments-all-one-new') ?><?php } elseif ($note['new-comments-count'] == $note['comments-count']) { ?>, <?= _S ('gs--comments-all-new') ?><?php } elseif ($note['new-comments-count']) { ?> · <span class="admin-links"><a href="<?=$note['href']?>#new"><?= $note['new-comments-count-text'] ?></a></span>
+                <?php // TAGS // ?>
+                <?php if ($content['class'] != 'frontpage') { ?>
+                    <?php if (array_key_exists ('tags', $note)): ?>
+                        <div class="e2-note-tags">
+                            <?php
+                            $tags = array ();
+                            foreach ($note['tags'] as $tag) {
+                            if ($tag['current?']) {
+                            $tags[] = '<span class="e2-tag e2-marked">'. $tag['name'] .'</span>';
+                            } else {
+                            $tags[] = '<a href="'. $tag['href'] .'" class="e2-tag">'. $tag['name'] .'</a>';
+                            }
+                            }
+                            echo implode ('', $tags)
+                            ?>
+                        </div>
+                    <?php endif; ?>
                 <?php } ?>
-                <?php } else { ?>
-                <a href="<?= $note['href'] ?>"><?= _S ('gs--no-comments') ?></a>
-                <?php } ?>
+
+                <?php // COMMENTS LINK // ?>
+                <div class="e2-note-comments-link">
+                    <span class="e2-timestamp" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></span>
+                    <br />
+                    <?php if ($note['comments-link?']): ?>
+                    <?php if ($note['comments-count']) { ?><a href="<?= $note['href'] ?>#e2-comments-count"><?= $note['comments-count-text'] ?></a><?php if ($note['new-comments-count'] == 1 and $note['comments-count'] == 1) { ?>, <?= _S ('gs--comments-all-one-new') ?><?php } elseif ($note['new-comments-count'] == $note['comments-count']) { ?>, <?= _S ('gs--comments-all-new') ?><?php } elseif ($note['new-comments-count']) { ?> · <span class="admin-links"><a href="<?=$note['href']?>#new"><?= $note['new-comments-count-text'] ?></a></span>
+                    <?php } ?>
+                    <?php } else { ?>
+                    <a href="<?= $note['href'] ?>"><?= _S ('gs--no-comments') ?></a>
+                    <?php } ?>
+                    <?php endif ?>
+                </div>
+
             </div>
-            <?php endif ?>
-        </div>
 
-    </post>
+            <?php if ($content['class'] == 'note') { ?>
+                <div class="e2-likes-action">
 
-    <?php if ($content['class'] == 'note') { ?>
-        <div class="e2-likes-action">
+                    <?php // LIKES // ?>
+                    <?php if (array_key_exists ('only', $content['notes'])) { ?>
+                        <?php if ($note['published?']) { ?>
+                            <div class="e2-note-likes">
+                                <?php if (@$content['blog']['show-subscribe-button?']) { ?>
+                                    <a id="e2-note-subscribe-button" class="e2-note-subscribe-button" href="<?= @$content['blog']['rss-href'] ?>" ><?= _S ('gs--subscribe-to-blog') ?></a>
+                                <?php } ?>
 
-            <?php // LIKES // ?>
-            <?php if (array_key_exists ('only', $content['notes'])) { ?>
-                <?php if ($note['published?']) { ?>
-                    <div class="e2-note-likes">
-                        <?php if (@$content['blog']['show-subscribe-button?']) { ?>
-                            <a id="e2-note-subscribe-button" class="e2-note-subscribe-button" href="<?= @$content['blog']['rss-href'] ?>" ><?= _S ('gs--subscribe-to-blog') ?></a>
-                        <?php } ?>
-
-                        <?php if ($note['shareable?']) { ?>
-                            <?php _LIB ('likely') ?>
-                            <div class="likely" data-url="<?= $note['href-original'] ?>" data-title="<?= strip_tags ($note['title']) ?>">
-                                <?php foreach ($note['share-to'] as $network => $network_info) { ?>
-                                    <?php if ($network_info['share?']) { ?>
-                                        <?php
-                                            $additional = '';
-                                            if ($network_info['data']) {
-                                                foreach ($network_info['data'] as $k => $v) {
-                                                    $additional .= ' data-'. $k .'="'. $v .'"';
-                                                }
-                                            }
-                                        ?>
-                                        <div class="<?= $network ?>" <?= $additional ?>><?= _S ('sn--'. $network .'-verb') ?></div>
-                                    <?php } ?>
+                                <?php if ($note['shareable?']) { ?>
+                                    <?php _LIB ('likely') ?>
+                                    <div class="likely" data-url="<?= $note['href-original'] ?>" data-title="<?= strip_tags ($note['title']) ?>">
+                                        <?php foreach ($note['share-to'] as $network => $network_info) { ?>
+                                            <?php if ($network_info['share?']) { ?>
+                                                <?php
+                                                    $additional = '';
+                                                    if ($network_info['data']) {
+                                                        foreach ($network_info['data'] as $k => $v) {
+                                                            $additional .= ' data-'. $k .'="'. $v .'"';
+                                                        }
+                                                    }
+                                                ?>
+                                                <div class="<?= $network ?>" <?= $additional ?>><?= _S ('sn--'. $network .'-verb') ?></div>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    </div>
                                 <?php } ?>
                             </div>
-                        <?php } ?>
-                    </div>
 
-                <?php } ?>
+                        <?php } ?>
+                    <?php } ?>
+                </div>
             <?php } ?>
+
         </div>
-    <?php } ?>
+    </post>
 
     <?php _X ('note-post') ?>
 
