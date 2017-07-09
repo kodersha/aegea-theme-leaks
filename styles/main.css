@@ -115,7 +115,7 @@ mark {
     }
 }
 .flag {
-    max-width: 800px;
+    max-width: 1200px;
     position: relative;
     padding: 50px 0 0;
     margin: 0 auto;
@@ -242,6 +242,12 @@ mark {
 .admin-icon .e2-toggle-state-on {
     opacity: 1;
 }
+.admin-icon.admin-menu-comments {
+    margin-left: 4px !important;
+}
+.admin-icon a.admin-menu-comments-count {
+    vertical-align: text-top;
+}
 .e2-toggle-state-off, .e2-toggle-on .e2-toggle-state-on, .e2-toggle-thinking .e2-toggle-state-thinking {
     padding: 0;
 }
@@ -293,6 +299,8 @@ mark {
     border-radius: 30px;
     padding: 10px 10px;
     margin-left: 10px !important;
+    width: 36px;
+    height: 36px;
 }
 .admin-menu .admin-icon.e2-new-note-item:hover {
     background: #e2e5e6;
@@ -439,12 +447,11 @@ post[class*="e2-note"]:first-of-type {
     color: #404040;
     font-size: 3em;
     line-height: 1.25;
-    padding-bottom: 10px;
     font-family: "LatoWebBlack", sans-serif;
     text-align: center;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     position: relative;
 }
 @media screen and (max-width:1023px) {
@@ -550,7 +557,7 @@ post[class*="e2-note"]:first-of-type {
 
 .e2-likes-action {
     display: table;
-    margin: 50px auto;
+    margin: 72px auto 50px;
     height: 100%;
 }
 ._2tga.active {
@@ -896,20 +903,20 @@ post[class*="e2-note"]:first-of-type {
     font-family: "LatoWebHeavy";
     max-width: 800px;
     width: 100%;
-    margin: 1em auto 0;
+    margin: 20px auto 0;
 }
 
 .e2-text h2,.e2-text h3 {
     font-size: 100%;
-    line-height: inherit;
-    margin: 0 0 10px 0;
+    line-height: normal;
+    margin: 20px auto;
     text-align: center;
 }
 
 .e2-text h2 {
     max-width: 800px;
     width: 100%;
-    margin: 10px auto;
+    margin: 20px auto;
     font-size: 1.7em;
     font-family: "LatoWebHeavy", sans-serif;;
 }
@@ -921,7 +928,7 @@ post[class*="e2-note"]:first-of-type {
 .e2-text hr {
     border: none;
     border-top: 1px rgba(0,0,0,0.15) solid;
-    margin: 1em auto;
+    margin: 20px auto;
     max-width: 800px;
 }
 
@@ -930,7 +937,7 @@ post[class*="e2-note"]:first-of-type {
 }
 
 .e2-text-generic-object,.e2-text-table,.e2-text-code,.e2-text p,.e2-text ul,.e2-text ol,.e2-text li,.e2-text blockquote {
-    margin: 10px auto;
+    margin: 20px auto;
     max-width: 800px;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -977,7 +984,7 @@ post[class*="e2-note"]:first-of-type {
 }
 
 .e2-text-picture,.e2-text-picture.fotorama,.e2-text-video {
-    margin: 1em auto;
+    margin: 20px auto;
     max-width: 800px;
 }
 .e2-text-audio {
@@ -985,7 +992,7 @@ post[class*="e2-note"]:first-of-type {
     border-radius: 2px;
     padding: 1em;
     max-width: 800px;
-    margin: 1em auto;
+    margin: 20px auto;
 }
 .e2-text-picture a {
     position: relative;
@@ -1069,7 +1076,7 @@ post[class*="e2-note"]:first-of-type {
 
 
 .e2-text-caption {
-    margin: 10px auto;
+    margin: 10px auto 20px;
     font-size: 0.8em;
     line-height: 16px;
     text-align: center;
@@ -1635,7 +1642,7 @@ form {
 
 .e2-note-form-wrapper,
 #e2-note-form-wrapper {
-    margin: 10px auto;
+    margin: 20px auto;
     max-width: 800px;
     float: none;
 }
@@ -2057,14 +2064,14 @@ img.fotorama__img {
 .e2-text [aside] {
 	text-align: center;
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 0;
 }
 @media screen and (min-width: 1280px) {
 	.e2-text [main] {
         float: left;
         clear: left;
-        margin-left: 200px;
-        width: 800px;
+        margin: 0 0 20px 200px;
+        max-width: 800px;
 	}
 	.e2-text [main]+[aside] {
         float: right;
@@ -2093,7 +2100,7 @@ img.fotorama__img {
 /* Lead */
 
 .e2-text [lead] {
-    margin-top: -10px;
+    margin-top: -15px;
 	margin-bottom: 20px;
     text-align: center;
     color: #567;
