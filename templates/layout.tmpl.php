@@ -52,29 +52,22 @@
         <?php _T ('unsubscribe') ?>
         <?php _T ('form') ?>
     </div>
-</div>
-</div>
 
-<?php if ($content['class'] == 'note') { ?>
-    <?php _T ('comments') ?>
-<?php } ?>
+    <?php if ($content['class'] == 'note') { ?>
+        <?php _T ('comments') ?>
+    <?php } ?>
 
-<?php /* if ($content['class'] == 'frontpage') { ?>
-    <div class="common quote">
-        <div class="content">
-            <?php _T ('quote') ?>
-        </div>
-    </div>
-<?php } */ ?>
+    <?php /* if ($content['class'] == 'frontpage') { ?>
+        <?php _T ('quote') ?>
+    <?php } */ ?>
 
-<div class="common">
     <div class="footer">
         <?php if ($content['class'] != 'found') { ?>
             <?php _T_FOR ('search') ?>
         <?php } ?>
         <div class="copyright">
             <?php _X ('footer-pre') ?>
-            <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?> / <a class="e2-blog-rss" href="<?=@$content['blog']['rss-href']?>">RSS</a>
+            <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span> © <?=$content['blog']['years-range']?> / <a class="e2-blog-rss" href="<?=@$content['blog']['rss-href']?>">RSS</a> / <?php _T ('login-element'); ?>
             <div class="e2-blog-description"><?= $content['blog']['description'] ?></div>
         </div>
 
@@ -85,16 +78,16 @@
             / <a target="_blank" href="https://github.com/sasha-travkina/blogengine-themes-leaks" class="e2-tag sponsored">Шаблон Leaks</a>
         </div>
 
+        <?php /* Место для счетчика */ ?>
         <div class="counter">
 
         </div>
 
-        <?php _T ('login-element'); ?>
         <?php _X ('footer-post') ?>
     </div>
 
-</div>
+    <div id="top-link">
+        <a href="#top"><i class="icon-chevron_up"></i></a>
+    </div>
 
-<div id="top-link">
-	<a href="#top"><i class="icon-chevron_up"></i></a>
 </div>
