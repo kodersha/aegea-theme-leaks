@@ -67,17 +67,14 @@ mark {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
 }
-
 ::-moz-selection {
 	background: #2ecc71;
 	color: #fff;
 }
-
 ::selection {
 	background: #2ecc71;
 	color: #fff;
 }
-
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -92,7 +89,6 @@ mark {
 ::-webkit-scrollbar-track-piece {
     background-color: #fff;
 }
-
 .common {
     margin: 0 auto;
     position: relative;
@@ -104,7 +100,7 @@ mark {
     }
 }
 .flag {
-    max-width: 1200px;
+    max-width: 1280px;
     position: relative;
     padding: 50px 0 0;
     margin: 0 auto;
@@ -192,7 +188,7 @@ mark {
 .spotlight {
     position: absolute;
     top: 50px;
-    right: 0;
+    right: 40px;
     white-space: nowrap;
     text-align: right;
 }
@@ -200,6 +196,7 @@ mark {
 @media screen and (max-width: 1023px) {
     .spotlight {
         top: 20px;
+        right: 0;
     }
 }
 
@@ -209,7 +206,7 @@ mark {
 }
 .content {
     margin: 0 auto 40px auto;
-    max-width: 1200px;
+    max-width: 1280px;
 }
 .footer {
     margin: 0 auto 10px auto;
@@ -426,8 +423,7 @@ post[class*="e2-note"]:first-of-type {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    padding: 4em 4%;
-    margin: 8em -4% 0;
+    padding: 4em 0;
 }
 .frontpage .e2-note-favourite .admin-links-floating {
     background: #f1f3f4;
@@ -446,24 +442,9 @@ post[class*="e2-note"]:first-of-type {
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(241,243,244,1) 80%);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 40%,rgba(241,243,244,1) 80%);
 }
-
 .e2-note-favourite .favourite {
-  position: relative;
+    position: relative;
 }
-
-.e2-note-favourite .favourite:after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  bottom: 11px;
-  right: -26px;
-  width: 28px;
-  height: 16px;
-  background-image: url("../../../system/theme/images/favourite-on.svg");
-  background-position: top right;
-  background-repeat: no-repeat;
-}
-
 .e2-note .admin-links-floating {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -474,11 +455,17 @@ post[class*="e2-note"]:first-of-type {
     transition-timing-function: ease-out;
     background: #fff;
     margin-top: -27px;
-    padding: 0px 8px 3px 8px;
+    margin-right: 40px;
+    padding: 0 8px 3px 8px;
     font-size: 13px;
 }
 .e2-note .admin-links-floating .admin-icon {
     margin: 0 -2px !important;
+}
+@media screen and (max-width: 1023px) {
+    .e2-note .admin-links-floating {
+        margin-right: 0;
+    }
 }
 
 .e2-note-text {
@@ -2014,21 +2001,35 @@ img.fotorama__img {
 	.e2-text [main] {
         float: left;
         clear: left;
-        margin: 0 0 20px 200px;
+        margin: 0 0 20px 240px;
         max-width: 800px;
 	}
 	.e2-text [main]+[aside] {
-        float: right;
+        float: left;
         clear: right;
-        width: 200px;
-        padding-left: 1em;
+        max-width: 190px;
+        padding-left: 10px;
+        margin-left: 10px;
         text-align: left;
         color: #a0a0a0;
-        right: 2em;
+        position: relative;
 	}
+
 	.e2-text [main]+[aside]+* {
 		clear: left;
 	}
+    .e2-text [aside]:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 1px;
+        background-color: #d9d9d9;
+        background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),color-stop(20%,#d9d9d9),color-stop(80%,#d9d9d9),to(#fff));
+        background-image: -webkit-linear-gradient(top,#fff,#d9d9d9 20%,#d9d9d9 80%,#fff);
+        background-image: linear-gradient(to bottom,#fff,#d9d9d9 20%,#d9d9d9 80%,#fff);
+    }
 }
 .e2-text [aside], .e2-text-picture p {
     line-height: 1.25;
@@ -2149,7 +2150,7 @@ img.fotorama__img {
     width: 100%;
     color: #a0a0a0;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 .e2-quote p {
     text-align: center;
