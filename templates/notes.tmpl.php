@@ -6,26 +6,26 @@
 
     <post id="e2-note-<?= $note['_']['_id'] ?>" class="<?= array_key_exists ('only', $content['notes'])? 'e2-only ': '' ?>e2-note <?= $note['favourite?']? 'e2-note-favourite' : '' ?> <?= $note['visible?']? '' : 'e2-hidden' ?> <?= $note['playlist?']? 'jouele-playlist' : '' ?>">
 
-        <span class="admin-links admin-links-floating admin-links-sticky">
-            <?php if (array_key_exists ('edit-href', $note)): ?>
-            <span class="admin-icon">
-                <a href="<?= $note['edit-href'] ?>" class="nu <?php if (array_key_exists ('only', $content['notes'])) {?>e2-edit-link<?php } ?>">
-                    <span class="e2-svgi"><i class="icon-pen"></i></span>
-                </a>
-                <span class="e2-unsaved-led" style="display: none"></span>
-            </span>
-            <?php if (array_key_exists ('favourite-toggle-href', $note)) { ?>
-                <span class="admin-links admin-icon">
-                    <a href="<?= $note['favourite-toggle-href'] ?>" class="nu e2-favourite-toggle <?= ($note['favourite?']? 'e2-toggle-on' : '') ?> e-2-toggle-thinking">
-                        <span class="e2-svgi">
-                            <span class="e2-toggle-state-off"><i class="icon-fire"></i></span>
-                            <span class="e2-toggle-state-on"><i class="icon-fire"></i></span>
-                            <span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span>
-                        </span>
+        <?php if (array_key_exists ('edit-href', $note)): ?>
+            <span class="admin-links admin-links-floating admin-links-sticky">
+                <span class="admin-icon">
+                    <a href="<?= $note['edit-href'] ?>" class="nu <?php if (array_key_exists ('only', $content['notes'])) {?>e2-edit-link<?php } ?>">
+                        <span class="e2-svgi"><i class="icon-pen"></i></span>
                     </a>
+                    <span class="e2-unsaved-led" style="display: none"></span>
                 </span>
-            <?php } ?>
-        </span>
+                <?php if (array_key_exists ('favourite-toggle-href', $note)) { ?>
+                    <span class="admin-links admin-icon">
+                        <a href="<?= $note['favourite-toggle-href'] ?>" class="nu e2-favourite-toggle <?= ($note['favourite?']? 'e2-toggle-on' : '') ?> e-2-toggle-thinking">
+                            <span class="e2-svgi">
+                                <span class="e2-toggle-state-off"><i class="icon-fire"></i></span>
+                                <span class="e2-toggle-state-on"><i class="icon-fire"></i></span>
+                                <span class="e2-toggle-state-thinking"><?= _SVG ('spin') ?></span>
+                            </span>
+                        </a>
+                    </span>
+                <?php } ?>
+            </span>
         <?php endif ?>
 
         <article id="post" class="<?php if ($content['class'] != 'note') { ?>e2-note-short<?php } ?>">
