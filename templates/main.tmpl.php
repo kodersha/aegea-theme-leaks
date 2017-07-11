@@ -14,7 +14,6 @@
             <?php _JS ('local-copies') ?>
         <?php } ?>
 
-        <e2:scripts-data />
         <?= @$content['embed']['pre-head-end'] ?>
 
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
@@ -35,42 +34,42 @@
         <?php } ?>
 
         <?= @$content['embed']['pre-body-end'] ?>
+        <e2:scripts-data />
+
+        <?php /* Стили */ ?>
+        <?php _CSS ('main') ?>
+        <?php _CSS ('lightbox') ?>
+
+        <?php /* Шрифты */ ?>
+        <?php _CSS ('font') ?>
+        <?php _CSS ('lato/latofonts') ?>
+        <?php _CSS ('mfglabsiconset/mfglabs_iconset') ?>
+
+        <?php /* Общие скрипты */ ?>
+        <?php _JS ('lightbox') ?>
+        <?php _JS ('lazyload') ?>
+        <?php _JS ('pace') ?>
+        <?php _T ('init-script') ?>
+
+        <?php /* Скрипты главной страницы */ ?>
+        <?php if ($content['class'] != 'note') { ?>
+            <?php _JS ('readmore') ?>
+            <?php _T ('main-script') ?>
+        <?php } ?>
+
+        <?php /* Скрипты страницы топика */ ?>
+        <?php if ($content['class'] == 'note') { ?>
+            <?php _JS ('avatarme') ?>
+            <?php _JS ('textmistake') ?>
+            <?php _T ('note-script') ?>
+        <?php } ?>
+
+        <?php if ($content['sign-in']['done?']) { ?>
+            <?php _CSS ('admin') ?>
+            <?php _JS ('admin') ?>
+        <?php } ?>
 
     </body>
-
-    <?php /* Стили */ ?>
-    <?php _CSS ('main') ?>
-    <?php _CSS ('colorbox') ?>
-    <?php _CSS ('animate') ?>
-
-    <?php /* Шрифты */ ?>
-    <?php _CSS ('font') ?>
-    <?php _CSS ('lato/latofonts') ?>
-    <?php _CSS ('mfglabsiconset/mfglabs_iconset') ?>
-
-    <?php /* Общие скрипты */ ?>
-    <?php _JS ('colorbox') ?>
-    <?php _JS ('lazyload') ?>
-    <?php _JS ('pace') ?>
-    <?php _T ('init-script') ?>
-
-    <?php /* Скрипты главной страницы */ ?>
-    <?php if ($content['class'] != 'note') { ?>
-        <?php _JS ('readmore') ?>
-        <?php _T ('main-script') ?>
-    <?php } ?>
-
-    <?php /* Скрипты страницы топика */ ?>
-    <?php if ($content['class'] == 'note') { ?>
-        <?php _JS ('avatarme') ?>
-        <?php _JS ('textmistake') ?>
-        <?php _T ('note-script') ?>
-    <?php } ?>
-
-    <?php if ($content['sign-in']['done?']) { ?>
-        <?php _CSS ('admin') ?>
-        <?php _JS ('admin') ?>
-    <?php } ?>
 
 </html>
 

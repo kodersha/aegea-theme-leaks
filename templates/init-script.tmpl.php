@@ -7,19 +7,6 @@
     <?php } ?>
 </script>
 
-<?php /* Colorbox */ ?>
-<script type="text/javascript">
-    $('.e2-text img').click(function() {
-        $(this).colorbox({
-            href: $(this).attr('src'),
-            scalePhotos: 'true',
-            width: '1280px',
-            scrolling: 'false'
-        });
-    });
-    $(document).ready(function() {$('.e2-text a').attr('target','_blank');});
-</script>
-
 <?php /* Предзагрузка страницы */ ?>
 <script type="text/javascript">
     var preloader = document.getElementById("preloader_preload");
@@ -59,7 +46,24 @@
     $(".e2-text-picture-imgwrapper img").each(function() {
         $(this).addClass('lazy');
         $(this).attr('data-original', $(this).attr('src'));
-        $(this).removeAttr("src");
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $( ".e2-note-text img" ).wrap(function() {
+            return "<a href='" + $( this ).attr("src") + "' data-lightbox='image' class='image'></a>";
+        });
+    });
+</script>
+<script>
+    lightbox.option({
+        'resizeDuration': 0,
+        'fadeDuration': 300,
+        'imageFadeDuration': 300,
+        'wrapAround': true,
+        'disableScrolling': true,
+        'fitImagesInViewport': true,
+        'showImageNumberLabel': false
     })
 </script>
 <script type="text/javascript">
@@ -108,4 +112,9 @@
             return false;
         });
     });
+</script>
+
+<?php /* Открываем ссылки в новом окне */ ?>
+<script type="text/javascript">
+    $(document).ready(function() {$('.e2-text a').attr('target','_blank');});
 </script>

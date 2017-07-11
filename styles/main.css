@@ -205,11 +205,12 @@ mark {
     margin: 0 auto;
 }
 .content {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 50px;
     max-width: 1280px;
 }
 .footer {
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
+    padding: 0 0 10px;
     max-width: 800px;
     font-size: 1em;
 }
@@ -376,7 +377,10 @@ post {
     display: block;
 }
 post[class*="e2-note"]:first-of-type {
-    margin-top: 4em;
+    margin-top: 50px;
+}
+post[class*="e2-note"]:last-of-type {
+    margin-bottom: 50px;
 }
 .e2-note {
     margin-top: 8em;
@@ -477,6 +481,9 @@ post[class*="e2-note"]:first-of-type {
 }
 .e2-note-text a {
     border-bottom: solid 1px rgba(112, 160, 176, 0.15);
+}
+.e2-note-text a.image {
+    border: none;
 }
 @media screen and (max-width: 800px) {
     .e2-note-text {
@@ -614,6 +621,7 @@ post[class*="e2-note"]:first-of-type {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 50px 0 0;
     word-wrap: break-word;
 }
 
@@ -728,12 +736,12 @@ post[class*="e2-note"]:first-of-type {
     margin-bottom: 0;
 }
 .frontnav.e2-pages.later {
-    margin-top: 3em;
-    margin-bottom: -2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .frontnav.e2-pages.earlier {
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .frontnav.e2-pages a {
     font-size: 2em;
@@ -830,11 +838,11 @@ post[class*="e2-note"]:first-of-type {
 .e2-section-heading {
     font-size: 1.3em;
     line-height: 1.4;
-    padding-bottom: 15px;
+    padding: 20px 0;
     font-family: "LatoWebHeavy";
     max-width: 800px;
+    margin: 0 auto;
     width: 100%;
-    margin: 20px auto 0;
 }
 
 .e2-text h2,.e2-text h3 {
@@ -925,12 +933,9 @@ post[class*="e2-note"]:first-of-type {
     max-width: 800px;
     margin: 20px auto;
 }
-.e2-text-picture a {
-    position: relative;
-}
 
 .e2-text-picture a img {
-    border-style: solid;
+    border: none;
 }
 
 .e2-text-picture a.e2-text-picture-link {
@@ -2150,7 +2155,7 @@ img.fotorama__img {
     width: 100%;
     color: #a0a0a0;
     max-width: 800px;
-    margin: 0 auto 50px;
+    margin: 50px auto;
 }
 .e2-quote p {
     text-align: center;
@@ -2287,3 +2292,4 @@ a.morelink.less {
 img:not([src]) {
     visibility: hidden;
 }
+
