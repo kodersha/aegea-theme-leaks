@@ -84,9 +84,7 @@
 					tabindex="3"
 					placeholder="<?= _S ('ff--text') ?>"
 					style="overflow-x: hidden; overflow-y: visible"
-				>
-					<?=$content['form-comment']['text']?>
-				</textarea>
+				><?=$content['form-comment']['text']?></textarea>
 				<div class="form-control-sublabel">
 					<?= $content['form-comment']['create:edit?']? (_S ('gs--no-html') .'<br />') : ''?>
 				</div>

@@ -59,9 +59,7 @@
 					autofocus="autofocus"
 					id="text"
 					style="height: 16.7em; min-height: 16.7em; overflow-x: hidden; overflow-y: visible"
-					>
-						<?=$content['form-comment-reply']['reply-text']?>
-					</textarea>
+					><?=$content['form-comment-reply']['reply-text']?></textarea>
 				</div>
 			</div>
 
