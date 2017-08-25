@@ -855,7 +855,8 @@ post[class*="e2-note"]:last-of-type {
 .e2-text h2 {
     max-width: 800px;
     width: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
+	padding: 40px 0 0;
     font-size: 1.7em;
     font-family: "LatoWebHeavy", sans-serif;;
 }
@@ -876,7 +877,8 @@ post[class*="e2-note"]:last-of-type {
 }
 
 .e2-text-generic-object,.e2-text-table,.e2-text-code,.e2-text p,.e2-text ul,.e2-text ol,.e2-text li,.e2-text blockquote {
-    margin: 20px auto;
+    margin: 0 auto;
+	padding: 20px 0 10px;
     max-width: 800px;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -923,8 +925,9 @@ post[class*="e2-note"]:last-of-type {
 }
 
 .e2-text-picture,.e2-text-picture.fotorama,.e2-text-video {
-    margin: 20px auto;
-    max-width: 800px;
+	margin: 0 auto;
+    max-width: 900px;
+    padding: 20px 0 10px;
 }
 .e2-text-audio {
     background: #f5f5f5;
@@ -1012,12 +1015,13 @@ post[class*="e2-note"]:last-of-type {
 
 
 .e2-text-caption {
-    margin: 10px auto 20px;
+    margin: 0 auto;
     font-size: 0.8em;
     line-height: 16px;
     text-align: center;
     opacity: .69;
     max-width: 800px;
+    padding: 10px 0 0;
 }
 
 .e2-tags {
@@ -2023,18 +2027,6 @@ img.fotorama__img {
 	.e2-text [main]+[aside]+* {
 		clear: left;
 	}
-    .e2-text [aside]:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        top: 0;
-        left: 0;
-        width: 1px;
-        background-color: #d9d9d9;
-        background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),color-stop(20%,#d9d9d9),color-stop(80%,#d9d9d9),to(#fff));
-        background-image: -webkit-linear-gradient(top,#fff,#d9d9d9 20%,#d9d9d9 80%,#fff);
-        background-image: linear-gradient(to bottom,#fff,#d9d9d9 20%,#d9d9d9 80%,#fff);
-    }
 }
 .e2-text [aside], .e2-text-picture p {
     line-height: 1.25;
@@ -2053,6 +2045,7 @@ img.fotorama__img {
     margin-top: -15px;
 	margin-bottom: 20px;
     text-align: center;
+	padding: 0;
     color: #567;
 }
 
@@ -2190,7 +2183,7 @@ img.fotorama__img {
     color: #8890a7;
     text-align: center;
     vertical-align: middle;
-    line-height: 46px;
+    line-height: 50px;
 }
 #top-link .icon-up-open-big {
     line-height: 48px;
