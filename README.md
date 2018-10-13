@@ -34,4 +34,4 @@ Leaks - Блоговая тема для "Эгея 2.6"
 Webmoney
 
 ## Автор
-Александра Травкина - [milkleaks.ru](http://milkleaks.ru)
+Александра Травкина - [fixel.ru](http://fixel.ru)
